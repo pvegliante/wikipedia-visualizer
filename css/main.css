@@ -1,0 +1,28 @@
+body {
+  background-color: #D5EDE5;
+  margin: auto;
+}
+
+.topPage {
+  text-align: center;
+}
+
+.wikiimg {
+  max-height: 300px;;
+}
+
+#searchBox {
+  padding: 20px;
+  width: 800px;
+  font-size: 30px;
+}
+
+div.articlesContainer {
+  cursor: pointer;
+  heigth: 100px;
+  margin: auto;
+}
+
+div.article {
+  font: black;
+}
