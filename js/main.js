@@ -10,7 +10,7 @@ $(document).ready(function() {
             success: function(response) {
                 console.log(response);
 
-                  $('#articlesContainer').html('');
+                $('#articlesContainer').html('');
 
                 for (var i = 0; i < response.query.search.length; i++) {
                     var title = response.query.search[i].title;
@@ -30,7 +30,7 @@ $(document).ready(function() {
         // create a string called article and write HTML elements inside of it,
         // similar to this:
         var article = "";
-        article += '<a href="https://wikipedia.org/' + title +'" target="_blank rel="noopener"">';
+        article += '<a href="https://wikipedia.org/wiki/' + title + '" target="_blank rel="noopener"">';
         article += '<div class="article">';
         article += '<h3>' + title + '</h3>';
         article += '<p>' + snippet + '</p>';
@@ -53,7 +53,6 @@ $(document).ready(function() {
         getArticles(searchTerm);
     });
 
-
     // BONUS: delete the searchButton element and it's code above, and do the
     // code below instead.
 
@@ -62,9 +61,9 @@ $(document).ready(function() {
     // function
     $("#searchBox").on("keypress", function(event) {
         // code here
-        if(event.keyCode === 13) {
-          var searchTerm = $('#searchBox').val();
-          getArticles(searchTerm);
+        if (event.keyCode === 13) {
+            var searchTerm = $('#searchBox').val();
+            getArticles(searchTerm);
         };
 
         // var searchTerm = $('#searchBox').val();
